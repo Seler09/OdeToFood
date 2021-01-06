@@ -5,9 +5,10 @@
 
 <h1>Restaurants</h1>
 
-@Model.Message
+<div>@Model.Message</div>
+
 <table class="table">
-    @foreach(var restaurant in Model.Restaurants)
+    @foreach (var restaurant in Model.Restaurants)
     {
         <tr>
             <td>@restaurant.Name</td>
