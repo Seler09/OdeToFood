@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="font-awesome" Version="4.7.0" />
+    <PackageReference Include="glyphicon" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>

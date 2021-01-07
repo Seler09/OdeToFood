@@ -10,7 +10,7 @@ namespace OdeToFood.Data
     {
         abstract protected IEnumerable<Restaurant> GetAllTemp();
         abstract protected IEnumerable<Restaurant> GetRestaurantsByNameTemp(string name);
-        
+
         protected void Temp()
         {
             ///to do
@@ -20,6 +20,7 @@ namespace OdeToFood.Data
     {
         IEnumerable<Restaurant> GetAll();
         IEnumerable<Restaurant> GetRestaurantsByName(string name);
+        IEnumerable<Restaurant> GetRestaurantsById(int id);
 
     }
 
@@ -39,8 +40,15 @@ namespace OdeToFood.Data
         }
         public IEnumerable<Restaurant> GetAll()
         {
-            return from r in restaurants                   
+            return from r in restaurants
                    orderby r.Name
+                   select r;
+        }
+
+        public IEnumerable<Restaurant> GetRestaurantsById(int id)
+        {
+            return from r in restaurants
+                   where r.Id.Equals(id)
                    select r;
         }
 
