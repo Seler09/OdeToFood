@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood", "OdeToFood\OdeToFood.csproj", "{F33BDFC5-B259-4D32-9A18-A8F5C025A20A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Core", "OdeToFoodCore\OdeToFood.Core.csproj", "{92F160D8-CAE8-48C8-A106-9E57BEA11D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Core", "OdeToFoodCore\OdeToFood.Core.csproj", "{92F160D8-CAE8-48C8-A106-9E57BEA11D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "OdeToFood.Library\OdeToFood.Data.csproj", "{2AF4944F-6994-45DD-AC38-DADB77C04C36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Data", "OdeToFood.Library\OdeToFood.Data.csproj", "{2AF4944F-6994-45DD-AC38-DADB77C04C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

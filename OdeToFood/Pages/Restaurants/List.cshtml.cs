@@ -14,7 +14,7 @@ namespace OdeToFood.Pages.Restaurants
 
 
         /// <summary>
-        /// outpit models
+        /// output models
         /// </summary>
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
