@@ -20,9 +20,7 @@ namespace OdeToFood.Pages.Restaurants
         }
         public void OnGet(int restaurantId) //it is strict 
         {
-            
-            //Restaurant.Id = restaurantId;
-            Restaurant = restaurantData.GetRestaurantsById(restaurantId).FirstOrDefault();
+            Restaurant = restaurantData.GetRestaurantById(restaurantId);
         }
     }
 }

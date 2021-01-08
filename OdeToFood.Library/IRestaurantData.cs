@@ -19,8 +19,8 @@ namespace OdeToFood.Data
     public interface IRestaurantData
     {
         IEnumerable<Restaurant> GetAll();
-        IEnumerable<Restaurant> GetRestaurantsByName(string name);
-        IEnumerable<Restaurant> GetRestaurantsById(int id);
+        IEnumerable<Restaurant> GetRestaurantsByName(string name);        
+        Restaurant GetRestaurantById(int id);
 
     }
 
@@ -45,11 +45,9 @@ namespace OdeToFood.Data
                    select r;
         }
 
-        public IEnumerable<Restaurant> GetRestaurantsById(int id)
+        public Restaurant GetRestaurantById(int id)
         {
-            return from r in restaurants
-                   where r.Id.Equals(id)
-                   select r;
+            return restaurants.SingleOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
