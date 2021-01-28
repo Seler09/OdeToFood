@@ -22,6 +22,7 @@ namespace OdeToFood.Data
         IEnumerable<Restaurant> GetRestaurantsByName(string name);        
         Restaurant GetRestaurantById(int id);
         Restaurant Update(Restaurant restaurant);
+        Restaurant Add(Restaurant newResturant);
         int Commit();
 
     }
@@ -39,6 +40,14 @@ namespace OdeToFood.Data
                 new Restaurant { Id = 3, Name = "Mewa", Location = "Poznań", Type = CuisineType.Polish }
             };
 
+        }
+
+        public Restaurant Add(Restaurant newResturant)
+        {
+            restaurants.Add(newResturant);
+            newResturant.Id = restaurants.Max(x => x.Id) + 1; //just temp
+
+            return newResturant;
         }
 
         public int Commit()
