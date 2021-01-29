@@ -43,6 +43,11 @@ namespace OdeToFood.Data
             return query;
         }
 
+        public int GetCountOfRestaurants()
+        {
+            return db.Restaurants.Count(); //in performance sensitive case i would cash this value
+        }
+
         public Restaurant GetRestaurantById(int id)
         {
             return db.Restaurants.Find(id);
