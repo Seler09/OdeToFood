@@ -52,7 +52,7 @@ namespace OdeToFood.Data
 
         public int GetCountOfRestaurants()
         {
-            return restaurants.Count()
+            return restaurants.Count();
         }
 
         public Restaurant GetRestaurantById(int id)
