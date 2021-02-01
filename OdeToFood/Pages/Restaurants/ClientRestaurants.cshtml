@@ -18,19 +18,19 @@
 
 @section Scripts {
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.23/datatables.min.css" />
-        <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.23/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.js"></script>
 
     <script>
         $(function () {
 
             var type = ["Unknown", "Mexican", "Italina", "Indian"]
-                
+
             $.ajax("/api/restaurants/", { method: "get" })
                 .then(function (response) {
                     $("#restaurants").dataTable({
                         data: response,
-                        columns:[
+                        columns: [
                             { data: "name" },
                             { data: "location" },
                             {
