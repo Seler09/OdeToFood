@@ -1,18 +1,26 @@
 ﻿@page
 @model OdeToFood.Pages.Restaurants.ClientRestaurantsModel
 @{
-//ViewData["Title"] = "ClientRestaurants";
+    //ViewData["Title"] = "ClientRestaurants";
 }
 
 <h2>Client Resturants</h2>
 
 @section Scripts {
+
+    <environment include="Development">
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.23/datatables.min.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.23/datatables.min.js"></script>
+    </environment>   
+
     <script>
         $(function () {
             $.ajax("/api/restaurants/", { method: "get" })
                 .then(function (response) {
-                    debugger;
-                    console.log(response)
+
                 })
         })
     </script>
